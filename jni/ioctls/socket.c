@@ -214,4 +214,4 @@ static const struct ioctl_group socket_grp = {
 	.ioctls_cnt = ARRAY_SIZE(socket_ioctls),
 };
 
-NEW_REG_IOCTL_GROUP(socket_grp)
+REG_IOCTL_GROUP(socket_grp)

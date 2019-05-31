@@ -52,10 +52,7 @@ void dump_ioctls(void);
 #define IOCTL(_request) \
 	{ .request = _request, .name = #_request, }
 
-#define REG_IOCTL_GROUP(_struct)\
-	static void __attribute__((constructor)) register_##_struct(void) {}
-
-#define NEW_REG_IOCTL_GROUP(_struct) \
+#define REG_IOCTL_GROUP(_struct) \
 	static void __attribute__((constructor)) register_##_struct(void) { \
 		register_ioctl_group(&_struct); \
 	}

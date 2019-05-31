@@ -392,4 +392,4 @@ static const struct ioctl_group binder_grp = {
 	.ioctls_cnt = ARRAY_SIZE(binder_ioctls),
 };
 
-NEW_REG_IOCTL_GROUP(binder_grp)
+REG_IOCTL_GROUP(binder_grp)
